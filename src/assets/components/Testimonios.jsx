@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const Testimonios = () => {
-  const testimoniosData = [
+    const testimoniosData = [
     {
         id: 1,
         nombre: "Carlos R.",
