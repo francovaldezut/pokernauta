@@ -1,14 +1,10 @@
-import { useState,useEffect,useRef } from 'react'
+import {useEffect,useRef } from 'react'
 import './App.css'
 import Testimonios from './assets/components/Testimonios.jsx'
 import Footer from './assets/components/Footer.jsx'
 
 import discordLogo from './assets/images/discord.png'
-import banerImage from './assets/images/banerEscuela.png'
-import comunidad from './assets/images/comunidad.png'
-import fichaRoja from './assets/images/FichaRoja.webp'
-import escuelaPoker from './assets/images/escuelaPoker.png'
-import astronauta1A1 from './assets/images/astronauta1A1.png'
+import fichaRoja from './assets/images/fichaRoja.webp'
 import fichaVerde from './assets/images/fichaVerde.webp'
 
 
