@@ -1,0 +1,268 @@
+import { useState,useEffect,useRef } from 'react'
+import './App.css'
+import Testimonios from './assets/components/Testimonios.jsx'
+import Footer from './assets/components/Footer.jsx'
+
+import discordLogo from './assets/images/discord.png'
+import banerImage from './assets/images/banerEscuela.png'
+import comunidad from './assets/images/comunidad.png'
+import fichaRoja from './assets/images/FichaRoja.png'
+import escuelaPoker from './assets/images/escuelaPoker.png'
+import astronauta1A1 from './assets/images/astronauta1A1.png'
+import fichaVerde from './assets/images/fichaVerde.png'
+
+
+function App() {
+
+  const bannerRef = useRef(null);
+
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.5, // Se activa cuando el 50% del banner es visible
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Buscamos todos los h1 dentro del contenedor y les añadimos la clase
+          const texts = entry.target.querySelectorAll('.reveal-text');
+          texts.forEach((text) => text.classList.add('visible'));
+        }
+      });
+    }, observerOptions);
+
+    if (bannerRef.current) {
+      observer.observe(bannerRef.current);
+    }
+
+    // Limpieza al desmontar el componente
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <>
+      <header>
+          <nav>
+            <div>
+              <a href="#" className='nombreMarca'>POKERNAUTA</a>
+            </div>
+
+            
+
+            <ul>
+              <li>
+                <a href="/">Inicio</a>
+              </li>
+              <li>
+                <a href="/contact">Contactame</a>
+              </li>
+              <li>
+                <a href="#planes">Planes</a>
+              </li>
+              <li>
+                <a href="" ><img src={discordLogo} alt="" /></a>
+              </li>
+            </ul>
+        </nav>
+      </header>
+
+      <section className='hero-section'>
+        {/* Contenedor que define el espacio completo y usa la imagen de fondo */}
+        <div className='banner-background'> 
+            
+        </div>
+    
+        {/* Contenedor que se superpone, ocupa el mismo espacio y tendrá el efecto borroso */}
+        <div className='glass-overlay'> 
+            <h2>¡Lleva tu póker más allá!</h2>
+            <a href="#planes">VER PLANES</a>
+        </div>
+        <div className='container-chips'> 
+          <img src={fichaRoja} alt="Ficha roja" className='fichaRoja' />
+          <img src={fichaVerde} alt="Ficha verde" className='fichaVerde' />
+        </div>
+      </section>
+
+      <section className='claves-section'>
+        <div className='containerNivelesSection'>
+          <div className='claves-conteiner'>
+            
+            <div className='conteinerImagenClaves'>
+              <span>No importa tu <span className="span-nivel" >EXPERIENCIA</span>
+              </span>
+              <div className='circle-degredee'></div>
+              
+            </div>
+            <div className='conteinerNiveles'>
+              
+              <div className='niveless'>
+                <div className='numero-niveles'>
+                  <h1>1
+
+                  </h1>
+                </div>
+                
+                <div className='texto-niveles'>
+                  <span>Principiante</span>
+                  <hr />
+                  <p>Te enseñaremos lo basico del poker, desde tipos de jugadas y reglas hasta estrategias basicas del poker para que puedas empezar a jugar de forma solida en las mesas</p>
+                </div>
+              </div>
+              <div className='niveless'>
+                <div className='numero-niveles'>
+                  <h1>2
+                    
+                  </h1>
+
+                </div>
+                <div className='texto-niveles'>
+                  <span>Intermedio</span>
+                  <hr />
+                  <p>Si ya tienes conocimientos basicos del poker, en este nivel te ayudaremos a mejorar tu juego y a entender conceptos mas avanzados para que puedas llevar tu juego al siguiente nivel</p>
+                </div>
+              </div>
+              <div className='niveless'>
+                <div className='numero-niveles'>
+                  <h1>3
+                    
+                  </h1>
+                </div>
+                <div className='texto-niveles'>
+                  <span>Avanzado</span>
+                  <hr />
+                  <p>Este nivel es para jugadores que ya tienen un buen conocimiento del poker y quieren perfeccionar su juego. Te enseñaremos estrategias avanzadas, lectura de oponentes y manejo de banca para que puedas competir al mas alto nivel</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section className='claves-aprender-section'>
+        <div className='claves-aprender-conteiner'>
+          <h1>Te <span>enseñaremos</span> las claves para lograr <span>resultados</span></h1>
+          <p>El poker no es solo saber jugar tambien hay que tener en cuenta factores externos como el tilt o pensamientos a largos plazos en nuestra escuela te mostraremos como lidiar con ellos</p>
+        </div>
+      </section>
+      <section className='section-comunidad'>
+        <div className='comunidad-conteiner'>
+          <div className='info-comunidad'>
+            <h3>No estas solo</h3>
+            <p>En pokernauta tenemos una gran comunidad que puedes unirte incluso sin ser miembro a nuestro discord en el podras mirar y comentar manos</p>
+          </div>
+          <div className='button-comunidad'>
+            <button>Unirme a la comunidad</button>
+          </div>
+          
+
+
+        </div>
+      </section>
+
+      <section className='section-planes' id='planes'>
+        <div className='planes-conteiner'>
+          <div className='plan-escuela'>
+            <div className='plan-badge'>Más Popular</div>
+            <div className='containerImagenPlanEscuela'>
+            </div>
+            <div className='info-plan-escuela'>
+              <h2>Plan Escuela</h2>
+              <p>Acceso a todos los recursos y materiales de la escuela</p>
+
+            </div>
+            <div>
+              <p>Algunas actividades y recursos:</p>
+              <ul className='beneficios-planes'>
+              <li>
+                📹 2 Clases semanales en vivo
+              </li>
+              <li>
+                🎯 Seguimiento Personalizado
+              </li>
+              <li>
+                📚 Material de Estudio VIP
+              </li>
+              <li>
+                📂 Acceso al Drive exclusivo
+              </li>
+              <li>
+                🤖 Entrenamiento con Solver
+              </li>
+              <li>
+                💬 Canales Privados de Discusión
+              </li>
+            </ul>
+            </div>
+
+            <div className='plan-footer'>
+              <button>Contratar</button>
+              <small className='garantia-texto'>Cancela cuando quieras</small>
+              <span>$29.99/mes</span>
+              
+            </div>
+          </div>
+
+
+
+          <div className='plan-1a1'>
+            <div className='containerImagenPlan1a1'></div>
+            <div className='info-plan-escuela'>
+              <h2>Plan individual</h2>
+              Entrenamiento individual diseñado para maximizar tu winrate y corregir tus errores en tiempo récord.
+
+            </div>
+            <div>
+              <p>Algunas actividades y recursos:</p>
+              <ul className='beneficios-planes'>
+              <li>
+                🔙 Todos los beneficios del plan escuela
+              </li>
+              <li>
+                🔴 Hiding Coach: Juego en vivo
+              </li>
+              <li>
+                💰 Análisis de Estadísticas
+              </li>
+              <li>
+                📈 Ajuste de Rangos
+              </li>
+              
+              <li>
+                🤖 Entrenamiento con Solver
+              </li>
+              <li>
+                💬 Consultas Abiertas: Fuera del horario de clase
+              </li>
+            </ul>
+            </div>
+
+            <div className='plan-footer'>
+              <button>Contratar</button>
+              <small className='garantia-texto'>Cancela cuando quieras</small>
+              <span>$99.99/mes</span>
+              
+            </div>
+          </div>
+          
+        
+        </div>
+        
+      </section>
+      
+
+      <section className='banner-domina-left' ref={bannerRef}>
+      <div className='banner-content'>
+        <h1 className='reveal-text'>Domina tu juego</h1>
+        <h1 className='reveal-text'>Domina tu mente</h1>
+        <h1 className='reveal-text'>Domina a tu oponente</h1>
+      </div>
+    </section>
+
+    <Testimonios />
+    <Footer/>
+    </>
+  )
+}
+
+export default App
