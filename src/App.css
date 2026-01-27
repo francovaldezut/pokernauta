@@ -276,7 +276,7 @@ header nav ul li a:hover{
 }
 
 .conteinerNiveles .niveless{
-  height: 150px;
+  height: auto;
   border: #7c4cfd 2px solid;
   display: flex;
   box-sizing: border-box;
@@ -299,26 +299,92 @@ header nav ul li a:hover{
 }
 
 .niveless .texto-niveles{
-  width: 70%;
-  padding: 5px;
+  width: 80%;
+  padding: 5px 10px;
   font-size: 13px;
   box-sizing: border-box;
+  height: auto;
+  display: flex;
+  flex-direction: column;
   
 }
 
 .texto-niveles span{
   margin: 0;
-  font-size: 1.1em;
+  font-size: 1.5em;
   color: #ffffff;
 }
 
 .texto-niveles p{
-  margin: 5px 0 0 0;
+  
   font-size: 1.1rem;
   color: #d1d1d1;
   font-weight: 500;
   
 }
+
+.texto-niveles{
+  color: #7c4cfd;
+  font-weight: bold;
+  
+}
+.texto-niveles .headerTextoNiveles{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.headerTextoNiveles p{
+  margin: 0;
+}
+
+
+.limites{
+  display: flex;  
+  gap: 10px;
+  margin-top: auto;
+
+}
+
+
+
+.texto-niveles .spanLimite{
+  background-color: #7c4cfd;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  width: 50px;
+  height: 20px;
+  text-align: center;
+}
+.spanLimite.NL2{
+  background-color: #1afa52;
+  color : black;
+}
+
+.spanLimite.NL5{
+  
+  background-color: #e0c424;
+  color : black;
+}
+
+.spanLimite.NL10{
+  
+  background-color: #cea800;
+  
+  color : black;
+}
+.spanLimite.NL25{
+  background-color: #ff5f5f;
+  color : black;
+}
+.spanLimite.NL100{
+  background-color: #da0801;
+  color : black;
+}
+
 
 .claves-aprender-section{
   width: 100%;
@@ -699,7 +765,7 @@ ul.beneficios-planes li{
   
   gap: 40px;
   
-  /* CAMBIO CLAVE: Cambia height por min-height o quítalo */
+  
   
   padding: 50px 0; /* El espacio lo das con padding, no con height fijo */
 }
@@ -718,8 +784,9 @@ ul.beneficios-planes li{
 .cardAboutMe img {
   display: block;
   max-width: 100%; 
-    
+  
 }
+
 .textAboutMe {
   font-size: 1.1rem;
   flex: 1;        
@@ -1117,8 +1184,17 @@ ul.beneficios-planes li{
   }
 
   .cardAboutMe {
+    display: flex;
+    justify-self: center;
+    align-self: center;
     max-height: auto;
-    width: 100%;
+    width: 317px !important;
+  }
+
+  .cardAboutMe img{
+    max-height: auto;
+    object-fit: cover;
+    
   }
 
   .textAboutMe h2 {

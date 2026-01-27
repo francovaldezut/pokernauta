@@ -49,13 +49,13 @@ function App() {
 
             <ul>
               <li>
-                <a href="#aboutMe">Inicio</a>
-              </li>
-              <li>
-                <a href="/contact">Contactame</a>
-              </li>
-              <li>
                 <a href="#planes">Planes</a>
+              </li>
+              <li>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSefAg0PSsfQWTpNwu50vK3_5pjxeoccTZNZmeNa4wSpF8oDlg/viewform">Contactame</a>
+              </li>
+              <li>
+                <a href="#aboutMe">Sobre mi</a>
               </li>
               <li>
                 <a href="" className='discordIcon'><FaDiscord /></a>
@@ -101,9 +101,18 @@ function App() {
                 </div>
                 
                 <div className='texto-niveles'>
-                  <span>Principiante</span>
-                  <hr />
-                  <p>Te enseñaremos lo basico del poker, desde tipos de jugadas y reglas hasta estrategias basicas del poker para que puedas empezar a jugar de forma solida en las mesas</p>
+                  <div className='headerTextoNiveles'>
+                    <span>Principiante</span>
+                    
+                    <p>Te enseñaremos lo basico del poker, desde tipos de jugadas y reglas hasta estrategias basicas del poker para que puedas empezar a jugar de forma solida en las mesas</p>
+                  </div>
+                  <div >
+                    <div className='limites'>
+                      <span className='spanLimite NL2'>
+                        NL2
+                      </span>
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className='niveless'>
@@ -114,9 +123,22 @@ function App() {
 
                 </div>
                 <div className='texto-niveles'>
-                  <span>Intermedio</span>
-                  <hr />
+                  <div className='headerTextoNiveles'>
+                    <span>Intermedio</span>
+                  
                   <p>Si ya tienes conocimientos basicos del poker, en este nivel te ayudaremos a mejorar tu juego y a entender conceptos mas avanzados para que puedas llevar tu juego al siguiente nivel</p>
+                  </div>
+                  
+                  
+                    <div className='limites'>
+                      <span className='spanLimite NL5'> 
+                        NL5 +
+                      </span>
+                      <span className='spanLimite NL10'>
+                        NL10 +
+                      </span>
+                    </div>
+                  
                 </div>
               </div>
               <div className='niveless'>
@@ -126,9 +148,21 @@ function App() {
                   </h1>
                 </div>
                 <div className='texto-niveles'>
-                  <span>Avanzado</span>
-                  <hr />
-                  <p>Este nivel es para jugadores que ya tienen un buen conocimiento del poker y quieren perfeccionar su juego. Te enseñaremos estrategias avanzadas, lectura de oponentes y manejo de banca para que puedas competir al mas alto nivel</p>
+                  <div className='headerTextoNiveles'>
+                    <span>Avanzado</span>
+                    
+                    <p>Para jugadores con experiencia que buscan perfeccionar su estrategia y maximizar sus ganancias. Aquí nos enfocamos en análisis profundo, lectura de oponentes y técnicas avanzadas de juego.</p>
+                  </div>
+                  
+                    <div className='limites'>
+                      <span className='spanLimite NL25'>
+                        NL25 +
+                      </span>
+                      <span className='spanLimite NL100'>
+                        NL100 +
+                      </span>
+                    </div>
+                  
                 </div>
               </div>
             </div>
