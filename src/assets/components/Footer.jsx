@@ -22,8 +22,9 @@ const Footer = () => {
                 <div className='footer-nav'>
                 <h4>Navegación</h4>
                 <ul>
+                    <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#planes">Planes de Estudio</a></li>
-                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#aboutMe">Sobre mi</a></li>
                     
                 </ul>
                 </div>
@@ -32,9 +33,9 @@ const Footer = () => {
                 <div className='footer-social'>
                 <h4>Mis Redes</h4>
                 <div className='social-links'>
-                    <a href="https://www.instagram.com/pokernauta/" className='social-item' target='blank'><FaInstagram className='faIcon'/> INSTAGRAM</a>
-                    <a href="#" className='social-item' target='blank'><FaDiscord className='faIcon' /> DISCORD</a>
-                    <a href="#" className='social-item'><FaYoutube className='faIcon' /> YOUTUBE</a>
+                    <a href="https://www.instagram.com/pokernauta/" className='social-item' target='blank'><FaInstagram className='faIcon'/> <span>INSTAGRAM</span></a>
+                    <a href="#" className='social-item' target='blank'><FaDiscord className='faIcon' /> <span>DISCORD</span></a>
+                    <a href="https://www.youtube.com/channel/UCGcGDDFZVigEToFkmBFl5xA/videos" className='social-item'><FaYoutube className='faIcon' /> <span>YOUTUBE</span></a>
                 </div>
                 </div>
 

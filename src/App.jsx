@@ -39,7 +39,7 @@ function App() {
 
   return (
     <>
-      <header>
+      <header id='inicio'>
           <nav>
             <div>
               <a href="#" className='nombreMarca'>POKERNAUTA</a>
