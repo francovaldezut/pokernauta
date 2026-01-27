@@ -2,10 +2,12 @@ import {useEffect,useRef } from 'react'
 import './App.css'
 import Testimonios from './assets/components/Testimonios.jsx'
 import Footer from './assets/components/Footer.jsx'
+import AboutMe from './assets/components/AboutMe.jsx'
 
-import discordLogo from './assets/images/discord.png'
 import fichaRoja from './assets/images/fichaRoja.webp'
 import fichaVerde from './assets/images/fichaVerde.webp'
+
+import { FaDiscord } from 'react-icons/fa'
 
 
 function App() {
@@ -47,7 +49,7 @@ function App() {
 
             <ul>
               <li>
-                <a href="/">Inicio</a>
+                <a href="#aboutMe">Inicio</a>
               </li>
               <li>
                 <a href="/contact">Contactame</a>
@@ -56,7 +58,7 @@ function App() {
                 <a href="#planes">Planes</a>
               </li>
               <li>
-                <a href="" ><img src={discordLogo} alt="" /></a>
+                <a href="" className='discordIcon'><FaDiscord /></a>
               </li>
             </ul>
         </nav>
@@ -255,6 +257,7 @@ function App() {
       </div>
     </section>
 
+    <AboutMe />
     <Testimonios />
     <Footer/>
     </>
