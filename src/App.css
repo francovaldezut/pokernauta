@@ -114,7 +114,7 @@ header nav ul li a:hover{
     height: 100%;
     
     /* Configura la imagen como fondo */
-    background-image: url('./assets/images/banerEscuela.png'); 
+    background-image: url('./assets/images/banerEscuela.webp'); 
     background-size: cover;
     background-position: center;
     z-index: 1; 
@@ -376,7 +376,7 @@ header nav ul li a:hover{
 
   background-image:
     linear-gradient(to top, rgba(19, 0, 71, 0.8) 0%, rgba(88, 27, 107, 0.6) 100%), 
-    url('./assets/images/comunidad.png');
+    url('./assets/images/comunidad.webp');
   background-size: cover;
   background-position: center;
   border-radius: 20px;
@@ -526,7 +526,7 @@ header nav ul li a:hover{
   height: 110px;
   box-sizing: border-box;
   overflow: hidden;
-  background-image: url('./assets/images/escuelaPoker.png');
+  background-image: url('./assets/images/escuelaPoker.webp');
   background-size: cover;
   background-position: center;
   position: absolute;
@@ -546,7 +546,7 @@ header nav ul li a:hover{
   height: 110px;
   box-sizing: border-box;
   overflow: hidden;
-  background-image: url('./assets/images/astronauta1A1.png');
+  background-image: url('./assets/images/astronauta1A1.webp');
   background-size: cover;
   background-position: center;
   position: absolute;
