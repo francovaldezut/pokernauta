@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { createPortal } from 'react-dom';
-import graficaDamian from '../images/graficas/damianScocia.webp';
+import graficaDamian from '../images/graficas/DamianScocia.webp';
 import graficaEfrain from '../images/graficas/EfrainMonoConNavaja.webp';
 import JoseRodriguez from '../images/graficas/joseRodriguez.webp';
 import maur1C from '../images/graficas/maur1C.webp';
