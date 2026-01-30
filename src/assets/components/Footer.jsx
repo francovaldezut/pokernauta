@@ -15,7 +15,7 @@ const Footer = () => {
                     <p className='footer-description'>
                         Transformá tu juego. Analizá tu mente. Domina la mesa con estrategia profesional.
                     </p>
-                    <p className='footer-copyright'>&copy; {new Date().getFullYear()} Escuela de Poker. Desarrollado para Grinders.</p>
+                    <p className='footer-copyright'>&copy; {new Date().getFullYear()} Escuela de Poker..</p>
                 </div>
 
                 {/* Columna 2: Navegación */}

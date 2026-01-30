@@ -1,4 +1,4 @@
-import {useEffect,useRef } from 'react'
+import {useEffect,useRef,useState } from 'react'
 import './App.css'
 import Testimonios from './assets/components/Testimonios.jsx'
 import Footer from './assets/components/Footer.jsx'
@@ -7,7 +7,7 @@ import AboutMe from './assets/components/AboutMe.jsx'
 import fichaRoja from './assets/images/fichaRoja.webp'
 import fichaVerde from './assets/images/fichaVerde.webp'
 
-import { FaDiscord } from 'react-icons/fa'
+import { FaDiscord,FaBars,FaTimes } from 'react-icons/fa'
 import Filosofia from './assets/components/Filosofia.jsx'
 import PlayLists from './assets/components/PlayLists.jsx'
 
@@ -15,6 +15,11 @@ import PlayLists from './assets/components/PlayLists.jsx'
 function App() {
 
   const bannerRef = useRef(null);
+  /* para la navbar */
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
 
   useEffect(() => {
     const observerOptions = {
@@ -41,26 +46,28 @@ function App() {
 
   return (
     <>
-      <header id='iniciot '>
+      <header>
           <nav>
             <div>
               <a href="#" className='nombreMarca'>POKERNAUTA</a>
             </div>
-
+            <div className="menu-icon" onClick={toggleMenu}>
+              {isOpen ? <FaTimes /> : <FaBars />}
+            </div>
             
 
-            <ul>
+            <ul className={isOpen ? 'active' : ''}>
               <li>
-                <a href="#planes">Planes</a>
+                <a href="#planes" onClick={toggleMenu}>Planes</a>
               </li>
               <li>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSefAg0PSsfQWTpNwu50vK3_5pjxeoccTZNZmeNa4wSpF8oDlg/viewform">Contactame</a>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSefAg0PSsfQWTpNwu50vK3_5pjxeoccTZNZmeNa4wSpF8oDlg/viewform" onClick={toggleMenu}>Contactame</a>
               </li>
               <li>
-                <a href="#aboutMe">Sobre mi</a>
+                <a href="#aboutMe" onClick={toggleMenu}>Sobre mi</a>
               </li>
               <li>
-                <a href="#contenido">Videos</a>
+                <a href="#contenido" onClick={toggleMenu}>Videos</a>
               </li>
               <li>
                 <a href="https://discord.gg/R7Q8XHkpC7" className='discordIcon'><FaDiscord /></a>
@@ -70,7 +77,7 @@ function App() {
         </nav>
       </header>
 
-      <section className='hero-section'>
+      <section className='hero-section' id='inicio'>
         {/* Contenedor que define el espacio completo y usa la imagen de fondo */}
         <div className='banner-background'> 
             
@@ -117,6 +124,9 @@ function App() {
                       <span className='spanLimite NL2'>
                         NL2
                       </span>
+                      <span className='spanLimite NL5'>
+                        NL5
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -130,18 +140,18 @@ function App() {
                 </div>
                 <div className='texto-niveles'>
                   <div className='headerTextoNiveles'>
-                    <span>Intermedio</span>
+                    <span>Intermedio - Avanzado</span>
                   
                   <p>Si ya tienes conocimientos basicos del poker, en este nivel te ayudaremos a mejorar tu juego y a entender conceptos mas avanzados para que puedas llevar tu juego al siguiente nivel</p>
                   </div>
                   
                   
                     <div className='limites'>
-                      <span className='spanLimite NL5'> 
-                        NL5 +
-                      </span>
-                      <span className='spanLimite NL10'>
+                      <span className='spanLimite NL10'> 
                         NL10 +
+                      </span>
+                      <span className='spanLimite NL25'>
+                        NL25 +
                       </span>
                     </div>
                   
@@ -221,7 +231,7 @@ function App() {
                 <p>Pagos: Binance, Neteller, Skrill, MP o Salas.</p>
               </div>
 
-              <button className='btn-contratar'>Contactar</button>
+              <a className='btn-contratar' href='https://docs.google.com/forms/d/e/1FAIpQLSefAg0PSsfQWTpNwu50vK3_5pjxeoccTZNZmeNa4wSpF8oDlg/viewform'>Contactar</a>
             </div>
             
           </div>
@@ -271,7 +281,7 @@ function App() {
                 <p>Pagos: Binance, Neteller, Skrill, MP o Salas.</p>
               </div>
 
-              <button className='btn-contratar'>Contactar</button>
+              <a className='btn-contratar' href='https://docs.google.com/forms/d/e/1FAIpQLSefAg0PSsfQWTpNwu50vK3_5pjxeoccTZNZmeNa4wSpF8oDlg/viewform'>Contactar</a>
             </div>
             
             </div>

@@ -17,22 +17,27 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: sticky; /* Opcional: para que el header te siga al bajar */
+  top: 0;
+  z-index: 1000;
 }
 
 header nav{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100%; 
-  
+  height: 100%;
   color: white;
   width: var(--width-page);
   box-sizing: border-box;
+  padding: 0 20px;
 }
-
-
-
-
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  z-index: 1100;
+}
 
 
 header nav .nombreMarca{
@@ -40,6 +45,7 @@ header nav .nombreMarca{
   font-weight: bold;
   color: white;
   text-decoration: none;
+  z-index: 1100;
 }
 
 
@@ -48,25 +54,17 @@ header nav ul{
   list-style: none;
   display: flex;
   align-items: center;
-  justify-content: space-around;
-  padding: 0;
+  gap: 25px;
   margin: 0;
-  gap: 15px;
-  color: white;
-  box-sizing: border-box;
   padding: 0;
-  font-size: 1.1rem;
+  transition: right 0.5s ease;
 }
 
 header nav ul li a{
   text-decoration: none;
   color: white;
   font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: transform 0.2s, color 0.2s;
-  padding: 5px 0px 5px 5px;
 }
 
 
@@ -380,7 +378,7 @@ header nav ul li a:hover{
 
 .spanLimite.NL5{
   
-  background-color: #e0c424;
+  background-color: #098613;
   color : black;
 }
 
@@ -391,13 +389,10 @@ header nav ul li a:hover{
   color : black;
 }
 .spanLimite.NL25{
-  background-color: #ff5f5f;
+  background-color: #ee3d37;
   color : black;
 }
-.spanLimite.NL100{
-  background-color: #da0801;
-  color : black;
-}
+
 
 
 .claves-aprender-section{
@@ -679,13 +674,7 @@ ul.beneficios-planes li{
   height: 100%; 
 }
 
-.plan-footer {
-  /* MAGIA: Esto empuja el footer al fondo de la card */
-  margin-top: auto; 
-  padding-top: 25px; /* Espacio extra para que no se pegue al texto de arriba */
-  width: 100%;
-  
-}
+
 
 .select-pago {
   width: 100%;
@@ -718,16 +707,18 @@ ul.beneficios-planes li{
   box-shadow: 0 0 20px rgba(124, 76, 253, 0.4);
 }
 
-.plan-footer button {
+.plan-footer a {
   background-color: #7c4cfd;
   color: white;
   border: none;
-  width: 150px;
+  width: 130px;
   padding: 10px 20px;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
   transition: 0.3s;
+  text-decoration: none;
+  text-align: center;
 }
 
 
@@ -1143,12 +1134,17 @@ ul.beneficios-planes li{
 }
 
 .t-card-wrapper {
-    min-width: 33.333%; /* Tres tarjetas por vista */
-    padding: 10px;
+    min-width: 33.333%; 
+    padding: 15px;
     box-sizing: border-box;
+    display: flex;
+    justify-content: center;
 }
 
+
 .nav-btn {
+    position: absolute;
+    z-index: 10;
     background: #7c4cfd;
     color: white;
     border: none;
@@ -1156,9 +1152,11 @@ ul.beneficios-planes li{
     height: 40px;
     border-radius: 50%;
     cursor: pointer;
-    z-index: 10;
     font-weight: bold;
-    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
 }
 
 .nav-btn.prev { left: -50px; }
@@ -1411,6 +1409,38 @@ ul.beneficios-planes li{
   transform: translateX(5px);
 }
 
+@media (max-width: 1300px) {
+    .nav-btn.prev { left: 15px; }
+    .nav-btn.next { right: 15px; }
+}
+
+@media (max-width: 900px) {
+    .t-card-wrapper {
+        /* Tablet: 2 tarjetas */
+        min-width: 50% !important;
+    }
+}
+@media (max-width: 600px) {
+    .t-card-wrapper {
+        /* Mobile: 1 tarjeta */
+        min-width: 100% !important;
+    }
+    
+    .nav-btn {
+        /* Flechas más pequeñas en móvil para que no tapen */
+        width: 30px;
+        height: 30px;
+    }
+    
+    .nav-btn.prev { left: 15px; }
+    .nav-btn.next { right: 15px; }
+
+    .t-card {
+        width: 100%; /* Que ocupe todo el ancho del wrapper */
+        height: auto;
+        min-height: 320px;
+    }
+}
 
 
 
@@ -1420,18 +1450,7 @@ ul.beneficios-planes li{
     --width-page: 90%; /* Increase width for better use of space */
   }
 
-  header nav {
-    flex-direction: column;
-    height: auto;
-    padding: 10px 0;
-  }
-
-  header nav ul {
-    
-    gap: 10px;
-    font-size: 1rem;
-  }
-
+  /* navbar */
 
 
   .glass-overlay h2 {
