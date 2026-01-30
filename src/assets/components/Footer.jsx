@@ -25,6 +25,7 @@ const Footer = () => {
                     <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#planes">Planes de Estudio</a></li>
                     <li><a href="#aboutMe">Sobre mi</a></li>
+                    <li><a href="#contenido">Contenido Exclusivo</a></li>
                     
                 </ul>
                 </div>
@@ -36,6 +37,7 @@ const Footer = () => {
                     <a href="https://www.instagram.com/pokernauta/" className='social-item' target='blank'><FaInstagram className='faIcon'/> <span>INSTAGRAM</span></a>
                     <a href="#" className='social-item' target='blank'><FaDiscord className='faIcon' /> <span>DISCORD</span></a>
                     <a href="https://www.youtube.com/channel/UCGcGDDFZVigEToFkmBFl5xA/videos" className='social-item'><FaYoutube className='faIcon' /> <span>YOUTUBE</span></a>
+                    
                 </div>
                 </div>
 

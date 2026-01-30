@@ -8,6 +8,8 @@ import fichaRoja from './assets/images/fichaRoja.webp'
 import fichaVerde from './assets/images/fichaVerde.webp'
 
 import { FaDiscord } from 'react-icons/fa'
+import Filosofia from './assets/components/Filosofia.jsx'
+import PlayLists from './assets/components/PlayLists.jsx'
 
 
 function App() {
@@ -39,7 +41,7 @@ function App() {
 
   return (
     <>
-      <header id='inicio'>
+      <header id='iniciot '>
           <nav>
             <div>
               <a href="#" className='nombreMarca'>POKERNAUTA</a>
@@ -58,8 +60,12 @@ function App() {
                 <a href="#aboutMe">Sobre mi</a>
               </li>
               <li>
+                <a href="#contenido">Videos</a>
+              </li>
+              <li>
                 <a href="" className='discordIcon'><FaDiscord /></a>
               </li>
+              
             </ul>
         </nav>
       </header>
@@ -141,30 +147,7 @@ function App() {
                   
                 </div>
               </div>
-              <div className='niveless'>
-                <div className='numero-niveles'>
-                  <h1>3
-                    
-                  </h1>
-                </div>
-                <div className='texto-niveles'>
-                  <div className='headerTextoNiveles'>
-                    <span>Avanzado</span>
-                    
-                    <p>Para jugadores con experiencia que buscan perfeccionar su estrategia y maximizar sus ganancias. Aquí nos enfocamos en análisis profundo, lectura de oponentes y técnicas avanzadas de juego.</p>
-                  </div>
-                  
-                    <div className='limites'>
-                      <span className='spanLimite NL25'>
-                        NL25 +
-                      </span>
-                      <span className='spanLimite NL100'>
-                        NL100 +
-                      </span>
-                    </div>
-                  
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -228,11 +211,19 @@ function App() {
             </div>
 
             <div className='plan-footer'>
-              <button>Contratar</button>
-              <small className='garantia-texto'>Cancela cuando quieras</small>
-              <span>$29.99/mes</span>
-              
+              <label className='label-select'>Planes disponibles:</label>
+              <select className='select-pago'>
+                <option value="mensual">Mensual --- $79.99 USD</option>
+                <option value="semestral">Semestral --- $399.99 USD</option>
+              </select>
+
+              <div className='medios-pago-box'>
+                <p>Pagos: Binance, Neteller, Skrill, MP o Salas.</p>
+              </div>
+
+              <button className='btn-contratar'>Contactar</button>
             </div>
+            
           </div>
 
 
@@ -248,34 +239,42 @@ function App() {
               <p>Algunas actividades y recursos:</p>
               <ul className='beneficios-planes'>
               <li>
-                🔙 Todos los beneficios del plan escuela
+                
               </li>
               <li>
-                🔴 Hiding Coach: Juego en vivo
+                🔴 Hiding Coach: Juego en vivo mientras superviso
               </li>
               <li>
-                💰 Análisis de Estadísticas
+                💰 Análisis de Estadísticas:Revisión profunda de tu paquete de manos y tu HUD para detectar y sellar fugas de dinero
               </li>
               <li>
-                📈 Ajuste de Rangos
+                📈 Ajuste de Rangos: Optimizamos tus tablas preflop y juego postflop
               </li>
               
               <li>
-                🤖 Entrenamiento con Solver
+                🤖 Material de Apoyo: Entrega de documentos y ejercicios prácticos para reforzar los spots
               </li>
               <li>
-                💬 Consultas Abiertas: Fuera del horario de clase
+                💬 Consultas Abiertas: Fuera del horario de clase 1 a 1
               </li>
             </ul>
             </div>
-
             <div className='plan-footer'>
-              <button>Contratar</button>
-              <small className='garantia-texto'>Cancela cuando quieras</small>
-              <span>$99.99/mes</span>
-              
+              <label className='label-select'>Packs disponibles:</label>
+              <select className='select-pago'>
+                <option value="1h">1 Hora: $80 USD</option>
+                <option value="2h">Pack 2 Horas --- $140 USD</option>
+                <option value="4h">Pack 4 Horas --- $260 USD</option>
+              </select>
+
+              <div className='medios-pago-box'>
+                <p>Pagos: Binance, Neteller, Skrill, MP o Salas.</p>
+              </div>
+
+              <button className='btn-contratar'>Contactar</button>
             </div>
-          </div>
+            
+            </div>
           
         
         </div>
@@ -290,9 +289,10 @@ function App() {
         <h1 className='reveal-text'>Domina a tu oponente</h1>
       </div>
     </section>
-
+    <Filosofia />
     <AboutMe />
     <Testimonios />
+    <PlayLists />
     <Footer/>
     </>
   )
