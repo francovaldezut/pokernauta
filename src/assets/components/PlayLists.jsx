@@ -1,5 +1,5 @@
 import React from 'react'
-import bankRoll from '../images/Miniaturas/bankroll.webp'
+import bankRoll from '../images/Miniaturas/bankRoll.webp'
 import clasesGratis from '../images/Miniaturas/clasesGratis.webp'
 import crusheandoMicros from '../images/Miniaturas/crusheandoMicros.webp'
 
