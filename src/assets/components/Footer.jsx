@@ -35,7 +35,7 @@ const Footer = () => {
                 <h4>Mis Redes</h4>
                 <div className='social-links'>
                     <a href="https://www.instagram.com/pokernauta/" className='social-item' target='blank'><FaInstagram className='faIcon'/> <span>INSTAGRAM</span></a>
-                    <a href="#" className='social-item' target='blank'><FaDiscord className='faIcon' /> <span>DISCORD</span></a>
+                    <a href="https://discord.gg/R7Q8XHkpC7" className='social-item' target='blank'><FaDiscord className='faIcon' /> <span>DISCORD</span></a>
                     <a href="https://www.youtube.com/channel/UCGcGDDFZVigEToFkmBFl5xA/videos" className='social-item'><FaYoutube className='faIcon' /> <span>YOUTUBE</span></a>
                     
                 </div>

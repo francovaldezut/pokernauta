@@ -63,7 +63,7 @@ function App() {
                 <a href="#contenido">Videos</a>
               </li>
               <li>
-                <a href="" className='discordIcon'><FaDiscord /></a>
+                <a href="https://discord.gg/R7Q8XHkpC7" className='discordIcon'><FaDiscord /></a>
               </li>
               
             </ul>
@@ -166,9 +166,9 @@ function App() {
             <h3>No estas solo</h3>
             <p>En pokernauta tenemos una gran comunidad que puedes unirte incluso sin ser miembro a nuestro discord en el podras mirar y comentar manos</p>
           </div>
-          <div className='button-comunidad'>
+          <a className='button-comunidad' href="https://discord.gg/R7Q8XHkpC7">
             <button>Unirme a la comunidad</button>
-          </div>
+          </a>
           
 
 
