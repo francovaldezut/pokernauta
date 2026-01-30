@@ -1410,8 +1410,10 @@ ul.beneficios-planes li{
 }
 
 @media (max-width: 1300px) {
-    .nav-btn.prev { left: 15px; }
-    .nav-btn.next { right: 15px; }
+    .t-card-wrapper {
+        /* Desktop pequeño: 3 tarjetas */
+        min-width: 33.333% !important;
+    }
 }
 
 @media (max-width: 900px) {
@@ -1451,6 +1453,56 @@ ul.beneficios-planes li{
   }
 
   /* navbar */
+  .menu-icon {
+    display: block;
+    color: white;
+    z-index: 1200; /* Por encima de todo */
+  }
+
+  /* 2. Transformamos el UL en un menú de pantalla completa */
+  header nav ul {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Escondido a la derecha */
+    width: 100%;
+    height: 100vh;
+    
+    /* Fondo oscuro con degradado (estilo Pokernauta) */
+    background: linear-gradient(180deg, #622bfa 0%, #1a0b3d 100%);
+    
+    flex-direction: column; /* Links uno arriba del otro */
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Más espacio para los dedos */
+    transition: 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    z-index: 1000;
+  }
+
+  /* 3. Cuando isOpen es true, la clase .active lo trae a la pantalla */
+  header nav ul.active {
+    right: 0;
+  }
+
+  /* 4. Estilo de los links en móvil */
+  header nav ul li a {
+    font-size: 1.8rem; /* Más grandes para tocar fácil */
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+
+  /* 5. Ajuste del icono de Discord en móvil */
+  .discordIcon {
+    font-size: 2.5rem;
+    margin-top: 20px;
+  }
+
+  /* 6. Evitar que el logo se mueva si el menú está abierto */
+  header nav .nombreMarca {
+    position: relative;
+    z-index: 1200;
+  }
+
 
 
   .glass-overlay h2 {
